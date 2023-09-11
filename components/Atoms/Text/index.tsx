@@ -11,6 +11,7 @@ type TextProps = {
   css?: SerializedStyles;
   width?:string;
   height?:string;
+  textAlign?:string;
 };
 
 export const Text = styled.span<TextProps>`
@@ -31,6 +32,7 @@ export const Text = styled.span<TextProps>`
   ${(props) => props.css}
   
   padding: ${(props) => props.padding};
+  text-align: ${(props) => props.textAlign};
   margin: ${(props) => props.margin};
   color: ${(props) => props.color};
   width: ${(props) => props.width};
@@ -38,7 +40,7 @@ export const Text = styled.span<TextProps>`
 `;
 
 Text.defaultProps = {
-  size: "small",
+  size: "medium",
   padding: '4px',
   color: 'black',
 };

@@ -6,14 +6,14 @@ type CustomLinkProps = {
     url: any,
     text: string,
     color?: string,
-    size?:string,
+    size?:"small" | "medium" | "large" | "xlarge" | 'xxlarge' | 'xxxlarge',
     weight?:string,
 }
 
 const CustomLink = (props: CustomLinkProps) => {
   return (
     <NextLink href={props.url} style={{cursor:'pointer'}}>
-      <Text color={props?.color}>{props.text}</Text>
+      <Text color={props?.color} size={props?.size}>{props.text}</Text>
     </NextLink>
   )
 }

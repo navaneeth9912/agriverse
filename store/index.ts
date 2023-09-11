@@ -8,7 +8,7 @@ import {
   flow,
 } from "mobx-state-tree";
 import User from "./User";
-import { fetchSample,SignInAction, SignUpAction,UploadDocumets } from "~/app/actions";
+import { fetchSample } from "~/app/actions";
 
 let store: IStore | undefined;
 
@@ -20,10 +20,10 @@ const Store = types
     user: types.optional(User, {
       name: "Anil Kumar",
       email: "garidipurianil1@gmail.com",
-      role:"buyer",
-      isSignedIn:false,
-      isDocsUpload:false,
-      isDocsVerify:false,
+      userProfileStatus:'PENDING',
+      userRole:'BUYER',
+      userProfile:'FPC-ESTATE',
+      status:200
     }),
 
     data: types.optional(types.frozen(), {}),
@@ -32,10 +32,6 @@ const Store = types
     let timer: any;
     const start = () => {
       timer = setInterval(() => {
-        // mobx-state-tree doesn't allow anonymous callbacks changing data.
-        // Pass off to another action instead (need to cast self as any
-        // because typescript doesn't yet know about the actions we're
-        // adding to self here)
         (self as any).update();
       }, 1000);
     };
@@ -58,19 +54,25 @@ const Store = types
     });
 
     const signIn = flow(function* callServerAction(inputs) {
-      const user = yield SignInAction(inputs);
-      self.user = user;
+      // const response = yield SignInAction(inputs);
+      // console.log(response,"Outside response")
+      // if(response.status === 400){
+      //   return response
+      // }else if(response.status === 200){
+      //   self.user = response;
+      //   return response
+      // }
     });
 
     const signUp = flow(function* callServerAction(inputs) {
-      const user = yield SignUpAction(inputs);
-      self.user = user;
+      // const user = yield SignUpAction(inputs);
+      // self.user = user;
     });
 
     const uploadDocumetsAction = flow(function* callServerAction(inputs) {
-      const user = yield UploadDocumets(inputs);
-      console.log(user,"action")
-      self.user = user;
+      // const respose = yield UploadDocumets(inputs);
+      // console.log(respose,"respose")
+      // self.user = respose;
     });
 
     return { start, stop, update, fetchJson, callServerAction, signIn, signUp,uploadDocumetsAction };

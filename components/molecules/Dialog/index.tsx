@@ -36,6 +36,7 @@ export const DialogOverlay = styled(Dialog.Overlay)((props) => ({
   position: "fixed",
   inset: 0,
   animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
+  zIndex:100,
 }));
 
 export const DialogContent = styled(Dialog.Content)<DialogProps>((props) => ({
@@ -53,6 +54,7 @@ export const DialogContent = styled(Dialog.Content)<DialogProps>((props) => ({
   padding: props.pd ? props.pd : 25,
   animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   "&:focus": { outline: "none" },
+  zIndex:3,
   paddingLeft: props.pl,
   paddingRight: props.pr,
   paddingTop: props.pt,

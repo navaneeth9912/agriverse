@@ -10,10 +10,11 @@ import {
 const User = types.model({
   name: types.string,
   email: types.string,
-  role: types.string,
-  isSignedIn: types.boolean,
-  isDocsUpload: types.boolean,
-  isDocsVerify:types.boolean,
+  userProfileStatus: types.string,
+  userRole: types.string,
+  userProfile: types.string,
+  status:types.number,
+  
 });
 
 export default User;

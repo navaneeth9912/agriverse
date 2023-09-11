@@ -1,0 +1,455 @@
+{
+    "productsData": [
+        {
+            "label": "Product Name",
+            "type": "dropdown",
+            "value": "",
+            "name": "name",
+            "options": [
+                "Green Coffee Beans",
+                "Roasted Coffee Beans",
+                "Instant Coffee",
+                "Agglomearate Coffee",
+                "Freeze Coffee",
+                "Spray Coffee"
+            ]
+        },
+        {
+            "name": "productId",
+            "label": "Reference to Product",
+            "type": "string"
+        },
+        {
+            "name": "sellerId",
+            "label": "Reference to User",
+            "type": "string"
+        },
+        {
+            "name": "categoryId",
+            "label": "Reference to Category",
+            "type": "string"
+        },
+        {
+            "label": "Variety",
+            "name": "variety",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Arabica",
+                "Robusta"
+            ]
+        },
+        {
+            "label": "Allowed Units",
+            "name": "allowedUnits",
+            "type": "string",
+            "options": [
+                "kg",
+                "ton",
+                "g"
+            ]
+        },
+        {
+            "label": "Origin",
+            "name": "origin",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Araku",
+                "Chikmagulur",
+                "coorg"
+            ]
+        },
+        {
+            "label": "Process Type",
+            "name": "processType",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Washed",
+                "Fully Washed",
+                "Natural"
+            ]
+        },
+        {
+            "label": "Grade",
+            "name": "grade",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "AAA",
+                "AA",
+                "AB",
+                "A",
+                "B",
+                "C",
+                "BB",
+                "BBB"
+            ]
+        },
+        {
+            "label": "Quantity",
+            "type": "number",
+            "name": "quantity",
+            "value": ""
+        },
+        {
+            "label": "Minimum Price",
+            "name": "minimumPrice",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Maximum Price",
+            "name": "maximumPrice",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Cupping Score",
+            "name": "cuppingScore",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "name": "Cupping Score Document",
+            "label": "Reference to File",
+            "type": "string"
+        },
+        {
+            "label": "Price ",
+            "name": "price",
+            "type": "string"
+        },
+        {
+            "label": "Harvest Period",
+            "name": "harvestPeriod",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "latitude",
+            "name": "latitude",
+            "type": "latitude",
+            "value": ""
+        },
+        {
+            "label": "longitude",
+            "name": "longitude",
+            "type": "longitude",
+            "value": ""
+        },
+        {
+            "label": "Address",
+            "name": "address",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Product Image",
+            "name": "productImg",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "About This Item",
+            "name": "description",
+            "type": "string",
+            "value": ""
+        }
+    ],
+    "certificateData": [
+        {
+            "label": "Product Name",
+            "type": "dropdown",
+            "value": "",
+            "name": "name",
+            "options": [
+                "Green Coffee Beans",
+                "Roasted Coffee Beans",
+                "Instant Coffee",
+                "Agglomearate Coffee",
+                "Freeze Coffee",
+                "Spray Coffee"
+            ]
+        },
+        {
+            "label": "Process Type",
+            "name": "processType",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Washed",
+                "Fully Washed",
+                "Natural"
+            ]
+        },
+        {
+            "label": "Cupping Score",
+            "name": "cuppingScore",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Harvest Period",
+            "name": "harvestPeriod",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Avilable Quantity",
+            "type": "number",
+            "name": "avilableQuantity",
+            "value": ""
+        },
+        {
+            "label": "Company Name",
+            "name": "companyName",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Mobile",
+            "name": "mobile",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Email",
+            "name": "email",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Certification Agency",
+            "name": "certificationAgency",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Certification Name",
+            "name": "certificationName",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Incorparation Certification",
+            "name": "incorparationCertification",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Search Location",
+            "name": "searchLocation",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "latitude",
+            "name": "latitude",
+            "type": "latitude",
+            "value": ""
+        },
+        {
+            "label": "longitude",
+            "name": "longitude",
+            "type": "longitude",
+            "value": ""
+        }
+    ],
+    "qGradeData": [
+        {
+            "label": "Name",
+            "name": "name",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Product Name",
+            "type": "dropdown",
+            "value": "",
+            "name": "name",
+            "options": [
+                "Green Coffee Beans",
+                "Roasted Coffee Beans",
+                "Instant Coffee",
+                "Agglomearate Coffee",
+                "Freeze Coffee",
+                "Spray Coffee"
+            ]
+        },
+        {
+            "name": "serviceProviderId",
+            "label": "Reference to User",
+            "type": "string"
+        },
+        {
+            "label": "Variety",
+            "name": "variety",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Arabic",
+                "Robusta"
+            ]
+        },
+        {
+            "label": "Origin",
+            "name": "origin",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Araku",
+                "Chikmagulur",
+                "coorg"
+            ]
+        },
+        {
+            "label": "Process Type",
+            "name": "processType",
+            "type": "enum",
+            "value": "",
+            "options": [
+                "Washed",
+                "Fully Washed",
+                "Natural"
+            ]
+        },
+        {
+            "label": "Harvest Period",
+            "name": "harvestPeriod",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Mobile",
+            "name": "mobile",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Email",
+            "name": "email",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Address",
+            "name": "address",
+            "type": "string",
+            "value": ""
+        }
+    ],
+    "financeData": [
+        {
+            "name": "serviceProviderId",
+            "label": "Reference to User",
+            "type": "string"
+        },
+        {
+            "label": "Customer Name",
+            "name": "customerName",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Mobile",
+            "name": "mobile",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Email",
+            "name": "email",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "DOI",
+            "name": "DOI",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Purpose of Loan",
+            "name": "purposeOfLoan",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Loan Amount",
+            "name": "loanAmount",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "Annual Income",
+            "name": "annualIncome",
+            "type": "number",
+            "value": ""
+        },
+        {
+            "label": "PAN Card",
+            "name": "panCard",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "PAN Card",
+            "name": "panCardImage",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Incoporation Certificate",
+            "name": "incoporationCertificate",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "3 year ITR",
+            "name": "threeYearITR",
+            "type": "string",
+            "value": ""
+        }
+    ],
+    "advisoryData": [
+        {
+            "name": "serviceProviderId",
+            "label": "Reference to User",
+            "type": "string"
+        },
+        {
+            "label": "Product Name",
+            "type": "dropdown",
+            "value": "",
+            "name": "name",
+            "options": [
+                "Green Coffee Beans",
+                "Roasted Coffee Beans",
+                "Instant Coffee",
+                "Agglomearate Coffee",
+                "Freeze Coffee",
+                "Spray Coffee"
+            ]
+        },
+        {
+            "label": "Name",
+            "name": "name",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Address",
+            "name": "address",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "label": "Write Your Question",
+            "name": "writeYourQuestion",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

@@ -10,13 +10,12 @@ export default  function Home() {
   const router = useRouter();
   
   useEffect(() => {
-    setInterval(() => {
-      router.push(ApplicationConstant.SIGNIN_URL_PATH)
-    }, 1000);
+    router.push(ApplicationConstant.SIGNIN_URL_PATH)
   }, []);
+  
   return (
     <Paper display='grid' placeItems='center' style={{height:`calc(100vh - 24px)`}} elevation={1} backgroundColor={theme.colors.whiteA} borderRadius={4}>
-      <Logo width={350} height={60}/>
+      <Logo width={350} height={90}/>
     </Paper>
   );
 }

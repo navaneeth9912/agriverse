@@ -1,102 +1,67 @@
-// import Image from "next/image";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Box from "~/components/Atoms/Box";
 import Paper from "~/components/Atoms/Paper";
 import { Text } from "~/components/Atoms/Text";
+import Link from "next/link";
+import theme from "~/theme";
 
-interface ProductCard {
-  id: number;
-  name: String;
-  origin: string;
-  Certification: string;
-  AvailableQty: number;
-  CuppingScore: number;
-  image: string;
-  price: number;
-}
-
-interface PersonComponentProps {
-  productData: ProductCard;
-}
-
-const Card: React.FC<PersonComponentProps> = ({ productData }) => {
+const DisplayData = (label: string, value: string | number | undefined | null, unit?: string) => {
   return (
-    <Link href={`/${productData.id}`}>
-      <Paper
-        key={productData.id}
-        elevation={1}
-        width="230px"
-        height="240px"
-        borderRadius={4}
-      >
-        <Box
-          display="flex"
-          flexDirection="column"
-          width="230px"
-          alignItems="center"
-        >
-          <Box width="220px" height="110px">
-            <img
-              width={220}
-              height={110}
-              src={productData?.image}
-              alt="Product Image"
-            />
-          </Box>
-          <Text size="large" weight="large" padding="2px">
-            {productData?.name}
-          </Text>
-          <Text size="medium" weight="large" padding="2px">
-            {productData?.price} /-(per kg)
-          </Text>
-          <Box display="flex" flexDirection="column" justifyContent="center">
-            <Box display="flex">
-              <Text size="small" width="100px">
-                Origin
-              </Text>
-              <Text>:</Text>
-              {productData?.origin ? (
-                <Text size="small">{productData?.origin}</Text>
-              ) : (
-                <Text size="small">Not AVailable</Text>
-              )}{" "}
-            </Box>
-            <Box display="flex">
-              <Text size="small" width="100px">
-                Available Qty
-              </Text>
-              <Text>:</Text>
-              {productData?.AvailableQty ? (
-                <Text size="small">{productData?.AvailableQty}</Text>
-              ) : (
-                <Text size="small">Not AVailable</Text>
-              )}
-            </Box>
-            <Box display="flex">
-              <Text size="small" width="100px">
-                Certification
-              </Text>
-              <Text>:</Text>
-              {productData?.Certification ? (
-                <Text size="small">{productData?.Certification}</Text>
-              ) : (
-                <Text size="small">Not AVailable</Text>
-              )}{" "}
-            </Box>
-            <Box display="flex">
-              <Text size="small" width="100px">
-                Cupping Score
-              </Text>
-              <Text>:</Text>
-              {productData?.CuppingScore ? (
-                <Text size="small">{productData?.CuppingScore}</Text>
-              ) : (
-                <Text size="small">Not AVailable</Text>
-              )}{" "}
-            </Box>
-          </Box>
+    <Box display="flex" alignItems="flex-end">
+      <Text size="small" width="100px" weight="large" padding="2px">
+        {label}
+      </Text>
+      <Text padding="2px">:</Text>
+      {value ? (
+        <Text size="small" width="100px" padding="2px">
+          {value} {unit}
+        </Text>
+      ) : (
+        <Text size="small" width="100px" color={theme.colors.redA} padding="2px">
+          Not Available
+        </Text>
+      )}
+    </Box>
+  );
+};
+
+const getsingleData = (data: any, name: string) => {
+  console.log(data,"data")
+  if (data){  const getdata = data.find((item: any) => item.name === name)?.value;
+    return getdata}
+ 
+}
+
+const Card = ({ productData }: { productData: any }) => {
+
+  console.log(productData.quantity)
+  
+  return (
+    <Link href={`singleProduct/${productData.id}`}>
+      <Paper elevation={2} width="252px" minHeight="273px" maxHeight="273px" display="flex" flexDirection="column" justifyContent="flex-start" alignItems="center" gap="5px" cursor="pointer" padding={0.5}>
+        <img src={productData.image?.location} alt="productImage" width={240} height={110} />
+        <Box textAlign="center" display="flex" flexDirection="column">
+          {productData?.name ? (
+            <Text size="large" weight="large" padding='0px'>
+              {productData?.name}
+            </Text>
+          ) : (
+            <Text color={theme.colors.redA} padding='0px'>No Available</Text>
+          )}
+          {productData?.minPrice && productData?.maxPrice ? (
+            <Text weight="large" padding='0px'>
+              {productData.minPrice} - {productData.maxPrice} /- (Per Kg)
+            </Text>
+          ) : (
+            <Text color={theme.colors.redA} padding='0px'>No Available</Text>
+          )}
+        </Box>
+        <Box display="flex" justifyContent="center" flexDirection="column">
+          {DisplayData('Variety', getsingleData(productData.productAttributes,'variety'))}
+          {DisplayData('Origin', getsingleData(productData.productAttributes,'origin'))}
+          {DisplayData('Available Qty', productData.quantity)}
+          {DisplayData('Certification', getsingleData(productData.productAttributes,'certificateName'))}
+          {DisplayData('CuppingScore', getsingleData(productData.productAttributes,'cuppingScore'))}
         </Box>
       </Paper>
     </Link>

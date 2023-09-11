@@ -214,6 +214,9 @@ declare module "@emotion/react" {
       blackA:string,
       redA:string,
       blueA:string,
+      yellowA:string,
+      grayA:string,
+      orangeA:string,
     };
     typography: typeof size,
     weight:{[x:string]:number};
@@ -230,6 +233,9 @@ const theme: Theme = {
     blackA:'#000',
     redA:'#FF1919',
     blueA:'#216DFF',
+    yellowA:'#FFC300',
+    grayA:'#4A4A4A',
+    orangeA:'#F97B22'
   },
   weight,
   gutter: 12,

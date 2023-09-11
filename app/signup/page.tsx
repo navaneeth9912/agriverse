@@ -3,7 +3,7 @@ import Box from '~/components/Atoms/Box'
 import AuthLayouts from '~/components/templates/AuthLayout'
 import SignUpForm from '~/containers/AuthContainers/signUp'
 
-const SignInPage = () => {
+const SignUpPage = () => {
   return (
     <Box>
       <AuthLayouts title='Sign Up' InputFileds={<SignUpForm/>}/>
@@ -11,4 +11,4 @@ const SignInPage = () => {
   )
 }
 
-export default SignInPage
+export default SignUpPage

@@ -12,7 +12,7 @@ type Avatarprop = {
   count?: string
 
 }
-export const SellerHomeCard = (props: Avatarprop) => (
+export const SELLERHomeCard = (props: Avatarprop) => (
 
   <Paper elevation={1}
     width="250px"
@@ -21,18 +21,18 @@ export const SellerHomeCard = (props: Avatarprop) => (
     justifyContent="space-around"
     flexDirection="row"
     padding={1}>
-   <Box
-              minWidth="60px"
-              height="40px"
-              borderRadius={100}
-              style={{ boxShadow: "0px 4px 4px #1EB442" }}
-              padding={1.2}
-            >
+    <Box
+      minWidth="60px"
+      height="40px"
+      borderRadius={100}
+      style={{ boxShadow: "0px 4px 4px #1EB442" }}
+      padding={1.2}
+    >
       {props.icon}
     </Box >
     <Box padding={1.3}>
-    <Text size="xlarge" weight="xlarge" font-weight="bolder" >{props.count}</Text>
-    <Text size="xlarge" weight="xlarge" font-family="sans-serif">{props.text}</Text>
+      <Text size="xlarge" weight="xlarge" font-weight="bolder" >{props.count}</Text>
+      <Text size="xlarge" weight="xlarge" font-family="sans-serif">{props.text}</Text>
     </Box>
   </Paper>
 );
