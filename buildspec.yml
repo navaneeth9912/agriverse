@@ -20,4 +20,4 @@ phases:
       - docker images
       - echo Pushing the Docker image...
       - docker tag codebuild:latest 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
-      - docker push 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest 
+      - docker push 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
