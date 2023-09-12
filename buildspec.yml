@@ -21,3 +21,7 @@ phases:
       - echo Pushing the Docker image...
       - docker tag codebuild:latest 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
       - docker push 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
+  artifacts:
+  files:  # List of files/directories to be included as artifacts
+    - build/*  # Example: Include all files in the "build" directory
+  name:
