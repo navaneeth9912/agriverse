@@ -21,9 +21,12 @@ phases:
       - echo Pushing the Docker image...
       - docker tag codebuild:latest 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
       - docker push 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
-  artifacts:
-  files:
-    - '**/*'
-  base-directory: base_dir
-  name: build-artifact-name
-  discard-paths: no
+  # Other configuration options...
+artifacts:
+  - name: build-artifact-name
+    files:
+      - '**/*'
+    base-directory: base_dir
+    discard-paths: no
+# Other configuration options...
+
