@@ -1,3 +1,0 @@
-install_dependencies
-start_server
-stop_server
