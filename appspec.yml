@@ -18,5 +18,5 @@ hooks:
   Deploy:
     - location: scripts/deploy.sh
       timeout: 900
-      runas: ec2-user  # Replace with the appropriate user for your app
+      runas: root
       onstart: true
