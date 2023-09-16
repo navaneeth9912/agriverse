@@ -6,21 +6,20 @@ phases:
       - aws --version
       - pip install --upgrade awscli
       - aws --version
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 650691777252.dkr.ecr.ap-south-1.amazonaws.com
-
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 650691777252.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on $(date)
       - echo Building the Docker image...
-      - docker build -t codebuild .
+      - docker build -t agresive-main . 
 
   post_build:
     commands:
       - echo Build completed on $(date)
       - docker images
       - echo Pushing the Docker image...
-      - docker tag codebuild:latest 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
-      - docker push 650691777252.dkr.ecr.ap-south-1.amazonaws.com/codebuild:latest
+      - docker tag agresive-main:latest 650691777252.dkr.ecr.us-east-1.amazonaws.com/agresive-main:latest
+      - docker push 650691777252.dkr.ecr.us-east-1.amazonaws.com/agresive-main:latest
 
 artifacts:
   files:
