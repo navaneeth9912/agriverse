@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Replace these values with your actual ECR image details
 AWS_ACCOUNT_ID="650691777252"
 AWS_REGION="us-east-1"
