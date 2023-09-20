@@ -11,15 +11,15 @@ phases:
     commands:
       - echo Build started on $(date)
       - echo Building the Docker image...
-      - docker build -t agresive . 
+      - docker build -t agriverse . 
 
   post_build:
     commands:
       - echo Build completed on $(date)
       - docker images
       - echo Pushing the Docker image...
-      - docker tag agresive-main:latest 650691777252.dkr.ecr.us-east-1.amazonaws.com/agresive:latest
-      - docker push 650691777252.dkr.ecr.us-east-1.amazonaws.com/agresive:latest
+      - docker tag agriverse:latest 650691777252.dkr.ecr.us-east-1.amazonaws.com/agriverse:latest
+      - docker push 650691777252.dkr.ecr.us-east-1.amazonaws.com/agriverse:latest
 
 artifacts:
   files:
