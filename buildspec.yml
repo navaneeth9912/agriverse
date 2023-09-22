@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on $(date)
       - echo Building the Docker image...
-      - docker build -t binduangry .
+      - docker build -t binduangry  .
 
   post_build:
     commands:
@@ -20,7 +20,6 @@ phases:
       - echo Pushing the Docker image...
       - docker tag binduangry:latest 650691777252.dkr.ecr.us-east-1.amazonaws.com/binduangry:latest
       - docker push 650691777252.dkr.ecr.us-east-1.amazonaws.com/binduangry:latest
-
 artifacts:
   files:
     - '**/*'
