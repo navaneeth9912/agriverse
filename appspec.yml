@@ -4,17 +4,17 @@ files:
   - source: /src
     destination: /var/www/html/
 hooks:
+  Deploy:
+    - location: /scripts/deploy.sh
+      timeout: 900
+      runas: root  
   BeforeInstall:
     - location: /scripts/install_dependencies
       timeout: 300
       runas: root
     - location: /scripts/start_server
       timeout: 300
-      runas: root
-  Deploy:
-    - location: /scripts/deploy.sh
-      timeout: 900
-      runas: root    
+      runas: root  
   ApplicationStop:
     - location: /scripts/stop_server
       timeout: 300
